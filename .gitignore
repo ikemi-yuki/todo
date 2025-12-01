@@ -1,43 +1,4 @@
-# === Laravel ===
-
-/vendor/
-/node_modules/
-.env
-.env.*
-!.env.example
-/public/storage
-/storage/*.key
-/storage/app/public
-/storage/logs/*.log
-
-# === Laravel Cache ===
-
-/bootstrap/cache/*.php
-!/bootstrap/cache/.gitignore
-
-# === Composer / NPM ===
-
-composer.lock
-package-lock.json
-yarn.lock
-
-# === Docker ===
-
 /docker/mysql/data/
-/docker/mysql/logs/
-/docker/mysql/conf.d/
-/docker/php/logs/
-/docker/nginx/logs/
-
-# === MySQL temp files（不要 & 権限エラーの原因） ===
-
-docker/mysql/data/#innodb_temp/
-docker/mysql/data/*.ibd
-docker/mysql/data/*.ibt
-docker/mysql/data/*.pid
-docker/mysql/data/*.err
-
-# === OS / Editor ===
 
 .DS_Store
 Thumbs.db
