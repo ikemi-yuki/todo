@@ -22,7 +22,7 @@
     max-width: 1230px;
 }
 
-.create__form {
+.create-form {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
