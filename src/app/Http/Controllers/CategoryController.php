@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Requests\CategoryRequest;
 
 
 class CategoryController extends Controller
@@ -12,5 +13,12 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
         return view('category', compact('categories'));
+    }
+
+    public function store(CategoryRequest $request)
+    {
+        $category = $request->only(['name']);
+        category::create($category);
+        return redirect('/categories')->with('message', 'カテゴリを作成しました');
     }
 }
